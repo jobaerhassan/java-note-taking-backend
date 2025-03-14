@@ -2,6 +2,13 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<!--  Basic Project Information-->
+<!--  groupId: Identifies the project’s organization (com.example).-->
+<!--  artifactId: The project name (note-taking-service).-->
+<!--  version: The version of the project (1.0-SNAPSHOT means it's under development).-->
+<!--  url: Placeholder for the project's website (can be updated later).-->
+
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
@@ -12,11 +19,19 @@
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
+<!--  Project Properties-->
+<!--  project.build.sourceEncoding=UTF-8 → Ensures that the project uses UTF-8 encoding.-->
+<!--  maven.compiler.source=1.7 & maven.compiler.target=1.7 → Specifies that Java 1.7 is used for compilation.-->
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
+
+<!--  Project Dependencies-->
+<!--  This project only includes JUnit 4.11, a testing framework.-->
+<!--  scope=test → JUnit is only used for testing and won’t be included in production.-->
 
   <dependencies>
     <dependency>
@@ -26,6 +41,21 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+<!--  Build & Plugins-->
+<!--  This section configures Maven plugins to automate build steps.-->
+
+<!--  Plugin	                    Purpose-->
+<!--  maven-clean-plugin	    Cleans old builds (mvn clean)-->
+<!--  maven-resources-plugin	Handles resource files (e.g., src/main/resources)-->
+<!--  maven-compiler-plugin	    Compiles Java files-->
+<!--  maven-surefire-plugin	    Runs unit tests-->
+<!--  maven-jar-plugin	        Packages the project as a .jar file-->
+<!--  maven-install-plugin	    Installs the package into the local repository (mvn install)-->
+<!--  maven-deploy-plugin	    Deploys the package to a remote repository-->
+<!--  maven-site-plugin	        Generates a project website-->
+<!--  maven-project-info-reports-plugin	Creates reports about dependencies, builds, and plugins-->
+
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
